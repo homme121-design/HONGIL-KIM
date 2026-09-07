@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>민준 ♥ 서연 결혼합니다</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600&family=Pretendard:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #FAF5EE;
+    --ivory-deep: #F2EADD;
+    --sage: #5C6B4F;
+    --sage-light: #8A957D;
+    --rose: #C48B86;
+    --charcoal: #3A3530;
+    --gold: #A98A54;
+    --line: #DCD2C0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--ivory-deep);
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    color: var(--charcoal);
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 430px;
+    background: var(--ivory);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 72px 32px 56px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 1.4s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-frame {
+    border: 1px solid var(--line);
+    padding: 40px 20px 44px;
+    position: relative;
+  }
+
+  .hero-frame::before,
+  .hero-frame::after {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--gold);
+  }
+  .hero-frame::before { top: -8px; left: -8px; border-right: none; border-bottom: none; }
+  .hero-frame::after { bottom: -8px; right: -8px; border-left: none; border-top: none; }
+
+  .eyebrow {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--sage-light);
+    margin-bottom: 22px;
+  }
+
+  .names {
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.5;
+    color: var(--charcoal);
+  }
+
+  .names .and {
+    display: block;
+    font-size: 15px;
+    color: var(--rose);
+    margin: 6px 0;
+  }
+
+  .hero-date {
+    margin-top: 26px;
+    font-size: 14px;
+    color: var(--sage);
+    letter-spacing: 0.5px;
+  }
+
+  /* ---------- Section shared ---------- */
+  section {
+    padding: 52px 32px;
+    border-top: 1px solid var(--line);
+  }
+
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 28px;
+    color: var(--sage);
+  }
+
+  /* ---------- Greeting ---------- */
+  .greeting p {
+    font-size: 15px;
+    line-height: 2;
+    text-align: center;
+    color: #5A5348;
+  }
+
+  .signature {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--charcoal);
+  }
+
+  .signature .fam {
+    color: var(--sage-light);
+    font-size: 13px;
+  }
+
+  /* ---------- Calendar ---------- */
+  .calendar {
+    text-align: center;
+  }
+
+  .cal-month {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 16px;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+  }
+
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 12px;
+    font-size: 13px;
+  }
+
+  .cal-grid span { color: var(--sage-light); font-size: 11px; }
+
+  .cal-day {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: var(--charcoal);
+  }
+
+  .cal-day.today {
+    background: var(--rose);
+    color: #fff;
+    border-radius: 50%;
+  }
+
+  .dday {
+    margin-top: 26px;
+    font-size: 13px;
+    color: var(--sage);
+    letter-spacing: 1px;
+  }
+
+  /* ---------- Location ---------- */
+  .venue-name {
+    text-align: center;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+
+  .venue-addr {
+    text-align: center;
+    font-size: 13px;
+    color: #7A7266;
+    margin-bottom: 20px;
+  }
+
+  .map-box {
+    height: 160px;
+    background: var(--ivory-deep);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--sage-light);
+    margin-bottom: 18px;
+  }
+
+  .map-buttons {
+    display: flex;
+    gap: 8px;
+  }
+
+  .map-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    border: 1px solid var(--sage);
+    color: var(--sage);
+    font-size: 13px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .transit {
+    margin-top: 24px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #5A5348;
+  }
+  .transit strong { color: var(--charcoal); font-weight: 500; }
+
+  /* ---------- Gallery ---------- */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .gallery-grid div {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--ivory-deep), #EFE6D4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .gallery-grid svg {
+    width: 68%;
+    height: 68%;
+  }
+
+  /* ---------- RSVP ---------- */
+  .rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .rsvp-form input, .rsvp-form select {
+    padding: 13px 14px;
+    border: 1px solid var(--line);
+    background: var(--ivory);
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--charcoal);
+  }
+
+  .rsvp-submit {
+    margin-top: 4px;
+    padding: 14px 0;
+    background: var(--sage);
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+  }
+
+  /* ---------- Accounts (accordion) ---------- */
+  .accordion {
+    border: 1px solid var(--line);
+  }
+
+  .acc-item + .acc-item { border-top: 1px solid var(--line); }
+
+  .acc-head {
+    padding: 16px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .acc-head .side { color: var(--sage-light); font-size: 12px; }
+
+  .acc-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: var(--ivory-deep);
+  }
+
+  .acc-item.open .acc-body { max-height: 200px; }
+
+  .acc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+
+  .acc-row + .acc-row { border-top: 1px solid var(--line); }
+
+  .copy-btn {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    background: transparent;
+    font-size: 11px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .copy-btn.copied { background: var(--gold); color: #fff; }
+
+  /* ---------- Contact ---------- */
+  .contact-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .contact-cols .role {
+    color: var(--sage-light);
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .contact-cols .who {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .call-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid var(--sage);
+    color: var(--sage);
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 40px 32px 60px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--sage-light);
+    letter-spacing: 1px;
+  }
+
+  .badge {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 11px;
+    color: #B7AE9C;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="hero">
+    <div class="hero-frame">
+      <div class="eyebrow">W E D D I N G &nbsp; I N V I T A T I O N</div>
+      <div class="names">
+        김민준
+        <span class="and">그리고</span>
+        이서연
+      </div>
+      <div class="hero-date">2026년 11월 14일 토요일 낮 12시 30분</div>
+    </div>
+  </div>
+
+  <section class="greeting">
+    <div class="section-title">모시는 글</div>
+    <p>
+      두 사람이 마주 보던 시간을 지나<br>
+      이제 같은 곳을 바라보며 걸어가려 합니다.<br><br>
+      저희 두 사람의 새로운 시작을<br>
+      귀한 걸음 하시어 축복해 주시면<br>
+      더없는 기쁨으로 간직하겠습니다.
+    </p>
+    <div class="signature">
+      <span class="fam">김OO · 이OO의 아들</span> 민준<br>
+      <span class="fam">박OO · 최OO의 딸</span> 서연
+    </div>
+  </section>
+
+  <section class="calendar">
+    <div class="section-title">예식 안내</div>
+    <div class="cal-month">2026. 11</div>
+    <div class="cal-grid">
+      <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+      <div class="cal-day"></div><div class="cal-day"></div><div class="cal-day">1</div><div class="cal-day">2</div><div class="cal-day">3</div><div class="cal-day">4</div><div class="cal-day">5</div>
+      <div class="cal-day">6</div><div class="cal-day">7</div><div class="cal-day">8</div><div class="cal-day">9</div><div class="cal-day">10</div><div class="cal-day">11</div><div class="cal-day">12</div>
+      <div class="cal-day">13</div><div class="cal-day today">14</div><div class="cal-day">15</div><div class="cal-day">16</div><div class="cal-day">17</div><div class="cal-day">18</div><div class="cal-day">19</div>
+    </div>
+    <div class="dday">D-DAY 까지 함께 기다려주세요</div>
+  </section>
+
+  <section class="location">
+    <div class="section-title">오시는 길</div>
+    <div class="venue-name">더 라움 컨벤션 3층 그랜드홀</div>
+    <div class="venue-addr">서울특별시 강남구 테헤란로 000</div>
+    <div class="map-box">지도 영역 (예시)</div>
+    <div class="map-buttons">
+      <button class="map-btn">네이버 지도</button>
+      <button class="map-btn">카카오맵</button>
+    </div>
+    <div class="transit">
+      <strong>지하철</strong> · 2호선 강남역 3번 출구, 도보 7분<br>
+      <strong>버스</strong> · 강남역 정류장 하차<br>
+      <strong>주차</strong> · 건물 내 지하 주차장 3시간 무료
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="section-title">갤러리</div>
+    <div class="gallery-grid">
+      <div>
+        <!-- 손잡은 커플 -->
+        <svg viewBox="0 0 100 100">
+          <circle cx="38" cy="34" r="12" fill="#F2D9C9"/>
+          <circle cx="62" cy="34" r="12" fill="#F2D9C9"/>
+          <path d="M20 90 Q22 55 40 50 Q50 47 50 60 Q50 47 60 50 Q78 55 80 90 Z" fill="#8A957D"/>
+          <path d="M35 55 Q50 68 65 55" stroke="#C48B86" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <!-- 웨딩 반지 -->
+        <svg viewBox="0 0 100 100">
+          <circle cx="38" cy="58" r="18" fill="none" stroke="#A98A54" stroke-width="5"/>
+          <circle cx="64" cy="58" r="18" fill="none" stroke="#A98A54" stroke-width="5"/>
+          <polygon points="38,32 43,40 33,40" fill="#C48B86"/>
+        </svg>
+      </div>
+      <div>
+        <!-- 부케 -->
+        <svg viewBox="0 0 100 100">
+          <path d="M50 60 L50 88" stroke="#8A957D" stroke-width="4"/>
+          <circle cx="50" cy="42" r="10" fill="#C48B86"/>
+          <circle cx="36" cy="50" r="9" fill="#D9A79E"/>
+          <circle cx="64" cy="50" r="9" fill="#D9A79E"/>
+          <circle cx="42" cy="34" r="8" fill="#EBC9C0"/>
+          <circle cx="58" cy="34" r="8" fill="#EBC9C0"/>
+        </svg>
+      </div>
+      <div>
+        <!-- 웨딩 케이크 -->
+        <svg viewBox="0 0 100 100">
+          <rect x="30" y="60" width="40" height="18" fill="#F5EFE3" stroke="#DCD2C0" stroke-width="2"/>
+          <rect x="36" y="42" width="28" height="18" fill="#FAF5EE" stroke="#DCD2C0" stroke-width="2"/>
+          <rect x="42" y="26" width="16" height="16" fill="#FFFFFF" stroke="#DCD2C0" stroke-width="2"/>
+          <path d="M50 18 L50 26" stroke="#C48B86" stroke-width="3"/>
+          <circle cx="50" cy="15" r="3" fill="#C48B86"/>
+        </svg>
+      </div>
+      <div>
+        <!-- 두 개의 하트 -->
+        <svg viewBox="0 0 100 100">
+          <path d="M40 40 C40 28 24 28 24 40 C24 50 40 62 40 62 C40 62 56 50 56 40 C56 28 40 28 40 40Z" fill="#C48B86"/>
+          <path d="M68 55 C68 47 58 47 58 55 C58 62 68 70 68 70 C68 70 78 62 78 55 C78 47 68 47 68 55Z" fill="#A98A54"/>
+        </svg>
+      </div>
+      <div>
+        <!-- 축배 잔 -->
+        <svg viewBox="0 0 100 100">
+          <path d="M32 30 L38 55 Q40 60 46 60 L46 82 M46 82 L38 88 M46 82 L54 88" stroke="#8A957D" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M28 30 L44 30 L38 55 Q37 60 32 55 Z" fill="#EFE6D4" stroke="#8A957D" stroke-width="2"/>
+          <path d="M68 30 L62 55 Q60 60 54 60 L54 82 M54 82 L46 88 M54 82 L62 88" stroke="#8A957D" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M72 30 L56 30 L62 55 Q63 60 68 55 Z" fill="#EFE6D4" stroke="#8A957D" stroke-width="2"/>
+        </svg>
+      </div>
+      <div>
+        <!-- 리본을 문 비둘기 -->
+        <svg viewBox="0 0 100 100">
+          <ellipse cx="50" cy="52" rx="24" ry="16" fill="#F5EFE3" stroke="#DCD2C0" stroke-width="2"/>
+          <circle cx="72" cy="42" r="9" fill="#F5EFE3" stroke="#DCD2C0" stroke-width="2"/>
+          <path d="M80 40 L92 36 L82 46 Z" fill="#A98A54"/>
+          <path d="M50 68 Q56 78 66 74" stroke="#C48B86" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <!-- 하트 나무 -->
+        <svg viewBox="0 0 100 100">
+          <rect x="46" y="55" width="8" height="30" fill="#8A957D"/>
+          <circle cx="50" cy="42" r="24" fill="#B7C09E"/>
+          <path d="M42 40 C42 34 34 34 34 40 C34 45 42 51 42 51 C42 51 50 45 50 40 C50 34 42 34 42 40Z" fill="#FAF5EE"/>
+          <path d="M64 38 C64 33 57 33 57 38 C57 42 64 47 64 47 C64 47 71 42 71 38 C71 33 64 33 64 38Z" fill="#FAF5EE"/>
+        </svg>
+      </div>
+      <div>
+        <!-- 캘린더 하트 -->
+        <svg viewBox="0 0 100 100">
+          <rect x="26" y="28" width="48" height="44" rx="3" fill="#FAF5EE" stroke="#A98A54" stroke-width="3"/>
+          <rect x="26" y="28" width="48" height="12" fill="#A98A54"/>
+          <path d="M50 48 C50 43 43 43 43 48 C43 52 50 58 50 58 C50 58 57 52 57 48 C57 43 50 43 50 48Z" fill="#C48B86"/>
+        </svg>
+      </div>
+      <div>
+        <!-- 초승달과 별 -->
+        <svg viewBox="0 0 100 100">
+          <path d="M62 30 A22 22 0 1 0 62 74 A17 17 0 1 1 62 30Z" fill="#A98A54"/>
+          <path d="M30 55 L32 60 L37 61 L32 63 L30 68 L28 63 L23 61 L28 60 Z" fill="#C48B86"/>
+          <path d="M40 32 L41 35 L44 36 L41 37 L40 40 L39 37 L36 36 L39 35 Z" fill="#C48B86"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="accounts">
+    <div class="section-title">마음 보내실 곳</div>
+    <div class="accordion">
+      <div class="acc-item">
+        <div class="acc-head" onclick="this.parentElement.classList.toggle('open')">
+          <span>신랑측</span>
+          <span class="side">▾</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-row">
+            <span>국민 000-00-000000 김민준</span>
+            <button class="copy-btn" onclick="event.stopPropagation(); this.textContent='복사됨'; this.classList.add('copied')">복사</button>
+          </div>
+          <div class="acc-row">
+            <span>신한 000-000-000000 김OO(부)</span>
+            <button class="copy-btn" onclick="event.stopPropagation(); this.textContent='복사됨'; this.classList.add('copied')">복사</button>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <div class="acc-head" onclick="this.parentElement.classList.toggle('open')">
+          <span>신부측</span>
+          <span class="side">▾</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-row">
+            <span>카카오뱅크 0000-00-000000 이서연</span>
+            <button class="copy-btn" onclick="event.stopPropagation(); this.textContent='복사됨'; this.classList.add('copied')">복사</button>
+          </div>
+          <div class="acc-row">
+            <span>우리 0000-000-000000 박OO(모)</span>
+            <button class="copy-btn" onclick="event.stopPropagation(); this.textContent='복사됨'; this.classList.add('copied')">복사</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="section-title">연락하기</div>
+    <div class="contact-cols">
+      <div>
+        <div class="role">신랑에게</div>
+        <div class="who">김민준</div>
+        <a class="call-btn" href="tel:01000000000">전화</a>
+      </div>
+      <div>
+        <div class="role">신부에게</div>
+        <div class="who">이서연</div>
+        <a class="call-btn" href="tel:01000000000">전화</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    저희의 시작을 축하해 주셔서 감사합니다
+  </footer>
+
+  <div class="badge">SAMPLE PREVIEW</div>
+
+</div>
+</body>
+</html>
