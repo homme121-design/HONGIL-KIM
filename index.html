@@ -42,7 +42,18 @@
     padding: 72px 32px 56px;
     text-align: center;
     position: relative;
+    overflow: hidden;
+    background-image: url('hero-photo.jpg');
+    background-size: cover;
+    background-position: center 22%;
     animation: fadeIn 1.4s ease;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(251, 243, 241, 0.78);
+    z-index: 1;
   }
 
   @keyframes fadeIn {
@@ -54,6 +65,7 @@
     border: 1px solid var(--line);
     padding: 40px 20px 44px;
     position: relative;
+    z-index: 2;
   }
 
   .hero-frame::before,
@@ -422,6 +434,7 @@
 <div class="card">
 
   <div class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-frame">
       <div class="eyebrow">W E D D I N G &nbsp; I N V I T A T I O N</div>
       <div class="names">
