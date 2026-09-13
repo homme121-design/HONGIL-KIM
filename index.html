@@ -309,6 +309,31 @@
     cursor: pointer;
   }
 
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--ivory);
+    color: var(--ivory);
+    background: rgba(58, 53, 48, 0.35);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .lightbox-nav.prev { left: -54px; }
+  .lightbox-nav.next { right: -54px; }
+
+  @media (max-width: 480px) {
+    .lightbox-nav.prev { left: -6px; }
+    .lightbox-nav.next { right: -6px; }
+  }
+
   /* ---------- RSVP ---------- */
   .rsvp-form {
     display: flex;
@@ -450,7 +475,7 @@
   <section class="greeting">
     <div class="section-title">모시는 글</div>
     <p>
-      함께 웃던 봄과, 서로를 다독이던 겨울을 지나<br>
+      함께 웃던 봄과 서로를 다독이던 겨울을 지나<br>
       어느새 계절이 몇 번이나 바뀌었습니다.<br><br>
       그 시간 속에서 저희는<br>
       서로에게 가장 편안한 쉼이 되어주었고,<br>
@@ -663,16 +688,32 @@
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
   <div class="lightbox-box">
     <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+    <button class="lightbox-nav prev" onclick="event.stopPropagation(); navLightbox(-1)">‹</button>
+    <button class="lightbox-nav next" onclick="event.stopPropagation(); navLightbox(1)">›</button>
     <div id="lightbox-content"></div>
   </div>
 </div>
 
 <script>
-  function openLightbox(el) {
-    const svg = el.querySelector('svg');
+  const galleryItems = document.querySelectorAll('.gallery-grid > div');
+  let lightboxIndex = 0;
+
+  function renderLightbox() {
+    const svg = galleryItems[lightboxIndex].querySelector('svg');
     document.getElementById('lightbox-content').innerHTML = svg.outerHTML;
+  }
+
+  function openLightbox(el) {
+    lightboxIndex = Array.from(galleryItems).indexOf(el);
+    renderLightbox();
     document.getElementById('lightbox').classList.add('open');
   }
+
+  function navLightbox(dir) {
+    lightboxIndex = (lightboxIndex + dir + galleryItems.length) % galleryItems.length;
+    renderLightbox();
+  }
+
   function closeLightbox(e) {
     if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
       document.getElementById('lightbox').classList.remove('open');
