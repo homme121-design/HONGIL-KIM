@@ -3,25 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>홍일 ♥ 선영 결혼합니다</title>
+<title>김홍일 ♥ 신선영 결혼합니다</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600&family=Pretendard:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ivory: #FBF3F1;
-    --ivory-deep: #F5E3DF;
-    --sage: #D8A7A0;
-    --sage-light: #E7C6C1;
-    --rose: #8B5E52;
-    --charcoal: #4A3B36;
-    --gold: #8B5E52;
-    --line: #EAD9D4;
+    --ivory: #FAF8F5;
+    --ivory-deep: #F3EFEA;
+    --sage: #A3A89E;
+    --sage-light: #C7CBC4;
+    --rose: #C28E88;
+    --charcoal: #4A4542;
+    --gold: #B8977E;
+    --line: #E5E0D8;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: var(--ivory-deep);
+    background: #EAE5DE;
     font-family: 'Pretendard', -apple-system, sans-serif;
     color: var(--charcoal);
     display: flex;
@@ -35,24 +35,25 @@
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,0,0,0.08);
   }
 
   /* ---------- Hero ---------- */
   .hero {
-    padding: 72px 32px 56px;
+    padding: 80px 32px 64px;
     text-align: center;
     position: relative;
     overflow: hidden;
     background-image: url('main_photo.jpeg');
     background-size: cover;
-    background-position: center 22%;
+    background-position: center 25%;
     animation: fadeIn 1.4s ease;
   }
 
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(251, 243, 241, 0.78);
+    background: rgba(250, 248, 245, 0.76);
     z-index: 1;
   }
 
@@ -63,34 +64,35 @@
 
   .hero-frame {
     border: 1px solid var(--line);
-    padding: 40px 20px 44px;
+    padding: 44px 20px 48px;
     position: relative;
     z-index: 2;
+    background: rgba(250, 248, 245, 0.4);
   }
 
   .hero-frame::before,
   .hero-frame::after {
     content: "";
     position: absolute;
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     border: 1px solid var(--gold);
   }
   .hero-frame::before { top: -8px; left: -8px; border-right: none; border-bottom: none; }
   .hero-frame::after { bottom: -8px; right: -8px; border-left: none; border-top: none; }
 
   .eyebrow {
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Gowun Batang', serif;
     font-size: 13px;
-    letter-spacing: 2px;
-    color: var(--sage-light);
-    margin-bottom: 22px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 24px;
   }
 
   .names {
-    font-family: 'Noto Serif KR', serif;
-    font-weight: 500;
-    font-size: 30px;
+    font-family: 'Gowun Batang', serif;
+    font-weight: 700;
+    font-size: 32px;
     line-height: 1.5;
     color: var(--charcoal);
   }
@@ -98,118 +100,147 @@
   .names .and {
     display: block;
     font-size: 15px;
+    font-weight: 400;
     color: var(--rose);
-    margin: 6px 0;
+    margin: 8px 0;
+    letter-spacing: 2px;
   }
 
   .hero-date {
-    margin-top: 26px;
+    margin-top: 28px;
     font-size: 14px;
-    color: var(--sage);
+    color: #7A726A;
     letter-spacing: 0.5px;
+    font-weight: 400;
   }
 
   /* ---------- Section shared ---------- */
   section {
-    padding: 52px 32px;
+    padding: 60px 32px;
     border-top: 1px solid var(--line);
   }
 
   .section-title {
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Gowun Batang', serif;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 28px;
-    color: var(--sage);
+    margin-bottom: 32px;
+    color: var(--charcoal);
+    letter-spacing: 1px;
+  }
+  
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    margin: 10px auto 0;
   }
 
   /* ---------- Greeting ---------- */
   .greeting p {
     font-size: 15px;
-    line-height: 2;
+    line-height: 2.1;
     text-align: center;
-    color: #5A5348;
+    color: #5C5550;
+    font-weight: 300;
   }
 
   .signature {
-    margin-top: 32px;
+    margin-top: 36px;
     text-align: center;
     font-size: 14px;
-    line-height: 1.9;
+    line-height: 2.2;
     color: var(--charcoal);
   }
 
   .signature .fam {
     color: var(--rose);
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 400;
   }
 
-  /* ---------- Calendar ---------- */
+  /* ---------- Calendar & D-Day ---------- */
   .calendar {
     text-align: center;
   }
 
   .cal-month {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 16px;
+    font-family: 'Gowun Batang', serif;
+    font-size: 17px;
     color: var(--charcoal);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
   }
 
   .cal-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    row-gap: 12px;
+    row-gap: 14px;
     font-size: 13px;
+    max-width: 320px;
+    margin: 0 auto;
   }
 
-  .cal-grid span { color: var(--sage-light); font-size: 11px; }
+  .cal-grid span { color: #B5ACA3; font-size: 12px; }
 
   .cal-day {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     color: var(--charcoal);
+    font-weight: 300;
   }
 
   .cal-day.today {
     background: var(--rose);
     color: #fff;
     border-radius: 50%;
+    font-weight: 500;
   }
 
-  .dday {
-    margin-top: 26px;
-    font-size: 13px;
-    color: var(--sage);
-    letter-spacing: 1px;
+  .dday-box {
+    margin-top: 32px;
+    padding: 16px;
+    background: var(--ivory-deep);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--charcoal);
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  .dday-box strong {
+    color: var(--rose);
+    font-weight: 600;
   }
 
   /* ---------- Location ---------- */
   .venue-name {
     text-align: center;
-    font-family: 'Noto Serif KR', serif;
-    font-size: 17px;
+    font-family: 'Gowun Batang', serif;
+    font-size: 18px;
     margin-bottom: 6px;
+    font-weight: 700;
   }
 
   .venue-addr {
     text-align: center;
     font-size: 13px;
-    color: #7A7266;
+    color: #7A726A;
     margin-bottom: 20px;
   }
 
   .map-box {
-    height: 180px;
+    height: 200px;
     border: 1px solid var(--line);
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     overflow: hidden;
+    border-radius: 6px;
   }
 
   .map-buttons {
@@ -221,20 +252,26 @@
     flex: 1;
     text-align: center;
     padding: 12px 0;
-    border: 1px solid var(--sage);
-    color: var(--sage);
+    border: 1px solid var(--line);
+    color: var(--charcoal);
     font-size: 13px;
-    background: transparent;
+    background: #fff;
     cursor: pointer;
     text-decoration: none;
     display: block;
+    border-radius: 4px;
+    transition: all 0.2s;
   }
+  .map-btn:hover { background: var(--ivory-deep); }
 
   .transit {
     margin-top: 24px;
     font-size: 13px;
-    line-height: 1.9;
-    color: #5A5348;
+    line-height: 2;
+    color: #5C5550;
+    background: var(--ivory-deep);
+    padding: 16px;
+    border-radius: 6px;
   }
   .transit strong { color: var(--charcoal); font-weight: 500; }
 
@@ -247,81 +284,66 @@
 
   .gallery-grid div {
     aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--ivory-deep), #F5E3DF);
+    background: var(--ivory-deep);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     cursor: pointer;
-  }
-
-  .gallery-grid svg {
-    width: 68%;
-    height: 68%;
-    pointer-events: none;
+    border-radius: 2px;
   }
 
   .gallery-grid img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    pointer-events: none;
-    display: block;
+    transition: transform 0.3s ease;
   }
+  .gallery-grid div:hover img { transform: scale(1.03); }
 
   /* ---------- Lightbox ---------- */
   .lightbox {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(58, 53, 48, 0.92);
+    background: rgba(40, 37, 34, 0.92);
     z-index: 999;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 20px;
   }
 
-  .lightbox.open {
-    display: flex;
-  }
+  .lightbox.open { display: flex; }
 
   .lightbox-box {
-    width: min(420px, 88vw);
+    width: min(400px, 90vw);
     max-height: 80vh;
     aspect-ratio: 3/4;
     background: var(--ivory);
-    border: 1px solid var(--gold);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-  }
-
-  .lightbox-box svg {
-    width: 62%;
-    height: 62%;
+    border-radius: 4px;
   }
 
   .lightbox-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .lightbox-close {
     position: absolute;
     top: -44px;
     right: 0;
-    width: 34px;
-    height: 34px;
-    border: 1px solid var(--ivory);
-    color: var(--ivory);
+    width: 36px;
+    height: 36px;
+    border: none;
+    color: #fff;
     background: transparent;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 22px;
     cursor: pointer;
   }
 
@@ -331,69 +353,43 @@
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
-    border: 1px solid var(--ivory);
-    color: var(--ivory);
-    background: rgba(58, 53, 48, 0.35);
-    font-size: 20px;
+    border: none;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 3;
+    border-radius: 50%;
   }
 
-  .lightbox-nav.prev { left: -54px; }
-  .lightbox-nav.next { right: -54px; }
-
-  @media (max-width: 480px) {
-    .lightbox-nav.prev { left: -6px; }
-    .lightbox-nav.next { right: -6px; }
-  }
-
-  /* ---------- RSVP ---------- */
-  .rsvp-form {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .rsvp-form input, .rsvp-form select {
-    padding: 13px 14px;
-    border: 1px solid var(--line);
-    background: var(--ivory);
-    font-size: 14px;
-    font-family: inherit;
-    color: var(--charcoal);
-  }
-
-  .rsvp-submit {
-    margin-top: 4px;
-    padding: 14px 0;
-    background: var(--sage);
-    color: #fff;
-    border: none;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-  }
+  .lightbox-nav.prev { left: 10px; }
+  .lightbox-nav.next { right: 10px; }
 
   /* ---------- Accounts (accordion) ---------- */
   .accordion {
     border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
   }
 
   .acc-item + .acc-item { border-top: 1px solid var(--line); }
 
   .acc-head {
-    padding: 16px 18px;
+    padding: 16px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
     cursor: pointer;
+    font-weight: 500;
   }
 
-  .acc-head .side { color: var(--sage-light); font-size: 12px; }
+  .acc-head .side { color: var(--gold); font-size: 12px; transition: transform 0.3s; }
+  .acc-item.open .acc-head .side { transform: rotate(180deg); }
 
   .acc-body {
     max-height: 0;
@@ -408,19 +404,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 18px;
+    padding: 14px 20px;
     font-size: 13px;
+    border-top: 1px solid var(--line);
   }
-
-  .acc-row + .acc-row { border-top: 1px solid var(--line); }
 
   .copy-btn {
     border: 1px solid var(--gold);
     color: var(--gold);
-    background: transparent;
-    font-size: 11px;
-    padding: 5px 10px;
+    background: #fff;
+    font-size: 12px;
+    padding: 6px 12px;
     cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
   }
 
   .copy-btn.copied { background: var(--gold); color: #fff; }
@@ -429,46 +426,54 @@
   .contact-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 20px;
     text-align: center;
     font-size: 13px;
   }
 
+  .contact-group {
+    background: #fff;
+    padding: 20px 10px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+
   .contact-cols .role {
-    color: var(--sage-light);
-    font-size: 11px;
-    margin-bottom: 6px;
+    color: var(--gold);
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 500;
   }
 
   .contact-cols .who {
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Gowun Batang', serif;
     font-size: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-weight: 700;
   }
 
   .call-btn {
     display: inline-block;
-    padding: 8px 16px;
-    border: 1px solid var(--sage);
-    color: var(--sage);
+    padding: 6px 14px;
+    border: 1px solid var(--line);
+    color: var(--charcoal);
     font-size: 12px;
     text-decoration: none;
+    border-radius: 4px;
+    background: var(--ivory);
+    transition: all 0.2s;
   }
+  .call-btn:hover { background: var(--ivory-deep); }
 
   /* ---------- Footer ---------- */
   footer {
     padding: 40px 32px 60px;
     text-align: center;
-    font-size: 12px;
-    color: var(--sage-light);
+    font-size: 13px;
+    color: #8C847B;
     letter-spacing: 1px;
-  }
-
-  .badge {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 11px;
-    color: #B7AE9C;
+    background: var(--ivory-deep);
+    border-top: 1px solid var(--line);
   }
 </style>
 </head>
@@ -481,7 +486,7 @@
       <div class="eyebrow">W E D D I N G &nbsp; I N V I T A T I O N</div>
       <div class="names">
         김홍일
-        <span class="and">그리고</span>
+        <span class="and">&</span>
         신선영
       </div>
       <div class="hero-date">2026년 11월 21일 토요일 오후 3시</div>
@@ -502,14 +507,14 @@
       오래도록 마음에 새기겠습니다.
     </p>
     <div class="signature">
-      <span class="fam">김용년 · 조상임의 아들</span> 홍일<br>
-      <span class="fam">신철순 · 허영옥의 딸</span> 선영
+      <span class="fam">김용년 · 조상임</span>의 아들 <strong style="font-weight:600;">홍일</strong><br>
+      <span class="fam">신철순 · 허영옥</span>의 딸 <strong style="font-weight:600;">선영</strong>
     </div>
   </section>
 
   <section class="calendar">
     <div class="section-title">예식 안내</div>
-    <div class="cal-month">2026. 11</div>
+    <div class="cal-month">2026년 11월 21일 토요일 오후 3시</div>
     <div class="cal-grid">
       <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
       <div class="cal-day">1</div><div class="cal-day">2</div><div class="cal-day">3</div><div class="cal-day">4</div><div class="cal-day">5</div><div class="cal-day">6</div><div class="cal-day">7</div>
@@ -518,7 +523,7 @@
       <div class="cal-day">22</div><div class="cal-day">23</div><div class="cal-day">24</div><div class="cal-day">25</div><div class="cal-day">26</div><div class="cal-day">27</div><div class="cal-day">28</div>
       <div class="cal-day">29</div><div class="cal-day">30</div>
     </div>
-    <div class="dday">그날까지, 함께 기다려주세요</div>
+    <div class="dday-box" id="dday-text">결혼식까지 남은 시간 계산 중...</div>
   </section>
 
   <section class="location">
@@ -532,8 +537,8 @@
       </iframe>
     </div>
     <div class="map-buttons">
-      <a class="map-btn" href="https://map.naver.com/p/entry/place/37064565" target="_blank">네이버 지도<br><span style="font-size:10px;opacity:0.75;">(길찾기 버튼 탭)</span></a>
-      <a class="map-btn" href="https://place.map.kakao.com/26455981" target="_blank">카카오맵<br><span style="font-size:10px;opacity:0.75;">(길찾기 버튼 탭)</span></a>
+      <a class="map-btn" href="https://map.naver.com/p/entry/place/37064565" target="_blank">네이버 지도</a>
+      <a class="map-btn" href="https://place.map.kakao.com/26455981" target="_blank">카카오맵</a>
     </div>
     <div class="transit">
       <strong>주소</strong> · 부산광역시 부산진구 황령대로 24<br>
@@ -544,52 +549,21 @@
   <section class="gallery">
     <div class="section-title">갤러리</div>
     <div class="gallery-grid">
-      <div onclick="openLightbox(this)">
-        <img src="photo_1.jpeg" alt="wedding photo 1" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_2.jpeg" alt="wedding photo 2" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_3.jpeg" alt="wedding photo 3" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_4.jpeg" alt="wedding photo 4" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_5.jpeg" alt="wedding photo 5" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_6.jpeg" alt="wedding photo 6" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_7.jpeg" alt="wedding photo 7" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_8.jpeg" alt="wedding photo 8" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_9.jpeg" alt="wedding photo 9" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_10.jpeg" alt="wedding photo 10" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_11.jpeg" alt="wedding photo 11" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_12.jpeg" alt="wedding photo 12" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_13.jpeg" alt="wedding photo 13" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_14.jpeg" alt="wedding photo 14" loading="lazy">
-      </div>
-      <div onclick="openLightbox(this)">
-        <img src="photo_15.jpeg" alt="wedding photo 15" loading="lazy">
-      </div>
-
+      <div onclick="openLightbox(this)"><img src="photo_1.jpeg" alt="wedding photo 1" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_2.jpeg" alt="wedding photo 2" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_3.jpeg" alt="wedding photo 3" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_4.jpeg" alt="wedding photo 4" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_5.jpeg" alt="wedding photo 5" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_6.jpeg" alt="wedding photo 6" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_7.jpeg" alt="wedding photo 7" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_8.jpeg" alt="wedding photo 8" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_9.jpeg" alt="wedding photo 9" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_10.jpeg" alt="wedding photo 10" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_11.jpeg" alt="wedding photo 11" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_12.jpeg" alt="wedding photo 12" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_13.jpeg" alt="wedding photo 13" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_14.jpeg" alt="wedding photo 14" loading="lazy"></div>
+      <div onclick="openLightbox(this)"><img src="photo_15.jpeg" alt="wedding photo 15" loading="lazy"></div>
     </div>
   </section>
 
@@ -598,37 +572,37 @@
     <div class="accordion">
       <div class="acc-item">
         <div class="acc-head" onclick="this.parentElement.classList.toggle('open')">
-          <span>신랑측</span>
-          <span class="side">▾</span>
+          <span>신랑측 계좌번호</span>
+          <span class="side">▼</span>
         </div>
         <div class="acc-body">
           <div class="acc-row">
-            <span>우리은행 1002-652-920226 김홍일</span>
-            <button class="copy-btn" onclick="event.stopPropagation(); navigator.clipboard.writeText('1002-652-920226'); this.textContent='복사됨'; this.classList.add('copied')">복사</button>
+            <span>우리은행 1002-652-920226<br><strong style="font-weight:600;">김홍일</strong></span>
+            <button class="copy-btn" onclick="event.stopPropagation(); copyText('1002652920226', this)">복사</button>
           </div>
           <div class="acc-row">
-            <span>경남은행 549-22-0213361 김용년</span>
-            <button class="copy-btn" onclick="event.stopPropagation(); navigator.clipboard.writeText('549-22-0213361'); this.textContent='복사됨'; this.classList.add('copied')">복사</button>
+            <span>경남은행 549-22-0213361<br><strong style="font-weight:600;">김용년</strong></span>
+            <button class="copy-btn" onclick="event.stopPropagation(); copyText('549220213361', this)">복사</button>
           </div>
           <div class="acc-row">
-            <span>경남은행 549-22-0925988 조상임</span>
-            <button class="copy-btn" onclick="event.stopPropagation(); navigator.clipboard.writeText('549-22-0925988'); this.textContent='복사됨'; this.classList.add('copied')">복사</button>
+            <span>경남은행 549-22-0925988<br><strong style="font-weight:600;">조상임</strong></span>
+            <button class="copy-btn" onclick="event.stopPropagation(); copyText('549220925988', this)">복사</button>
           </div>
         </div>
       </div>
       <div class="acc-item">
         <div class="acc-head" onclick="this.parentElement.classList.toggle('open')">
-          <span>신부측</span>
-          <span class="side">▾</span>
+          <span>신부측 계좌번호</span>
+          <span class="side">▼</span>
         </div>
         <div class="acc-body">
           <div class="acc-row">
-            <span>우리은행 1002-042-943305 신선영</span>
-            <button class="copy-btn" onclick="event.stopPropagation(); navigator.clipboard.writeText('1002-042-943305'); this.textContent='복사됨'; this.classList.add('copied')">복사</button>
+            <span>우리은행 1002-042-943305<br><strong style="font-weight:600;">신선영</strong></span>
+            <button class="copy-btn" onclick="event.stopPropagation(); copyText('1002042943305', this)">복사</button>
           </div>
           <div class="acc-row">
-            <span>하나은행 301-910915-05307 허영옥</span>
-            <button class="copy-btn" onclick="event.stopPropagation(); navigator.clipboard.writeText('301-910915-05307'); this.textContent='복사됨'; this.classList.add('copied')">복사</button>
+            <span>하나은행 301-910915-05307<br><strong style="font-weight:600;">허영옥</strong></span>
+            <button class="copy-btn" onclick="event.stopPropagation(); copyText('30191091505307', this)">복사</button>
           </div>
         </div>
       </div>
@@ -637,36 +611,36 @@
 
   <section class="contact">
     <div class="section-title">연락하기</div>
-    <div class="contact-cols">
-      <div>
+    <div class="contact-cols" style="margin-bottom: 16px;">
+      <div class="contact-group">
         <div class="role">신랑에게</div>
         <div class="who">김홍일</div>
-        <a class="call-btn" href="tel:01099631713">전화</a>
+        <a class="call-btn" href="tel:01099631713">전화하기</a>
       </div>
-      <div>
+      <div class="contact-group">
         <div class="role">신부에게</div>
         <div class="who">신선영</div>
-        <a class="call-btn" href="tel:01079296470">전화</a>
+        <a class="call-btn" href="tel:01079296470">전화하기</a>
       </div>
     </div>
-    <div class="contact-cols" style="margin-top:28px;">
-      <div>
+    <div class="contact-cols">
+      <div class="contact-group">
         <div class="role">신랑측 혼주</div>
-        <div class="who">김용년</div>
-        <a class="call-btn" href="tel:01035761713">전화</a>
-        <div class="who" style="margin-top:10px;">조상임</div>
-        <a class="call-btn" href="tel:01085731713">전화</a>
+        <div class="who">아버지 김용년</div>
+        <a class="call-btn" href="tel:01035761713" style="margin-bottom:8px; display:block;">전화하기</a>
+        <div class="who" style="margin-top:12px;">어머니 조상임</div>
+        <a class="call-btn" href="tel:01085731713">전화하기</a>
       </div>
-      <div>
+      <div class="contact-group">
         <div class="role">신부측 혼주</div>
-        <div class="who">허영옥</div>
-        <a class="call-btn" href="tel:01066326470">전화</a>
+        <div class="who">어머니 허영옥</div>
+        <a class="call-btn" href="tel:01066326470">전화하기</a>
       </div>
     </div>
   </section>
 
   <footer>
-    저희의 시작을 축하해 주셔서 감사합니다
+    저희의 소중한 시작을 축하해 주셔서 감사합니다.
   </footer>
 
 </div>
@@ -681,12 +655,48 @@
 </div>
 
 <script>
+  // D-Day 계산 (2026년 11월 21일 15:00:00 기준)
+  function updateDday() {
+    const weddingDate = new Date('2026-11-21T15:00:00');
+    const now = new Date();
+    const diff = weddingDate - now;
+
+    const ddayText = document.getElementById('dday-text');
+    if (diff < 0) {
+      ddayText.innerHTML = "행복한 결혼식이 성공적으로 마쳤습니다.";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / 1000 / 60) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    ddayText.innerHTML = `김홍일 ♥ 신선영의 결혼식이 <strong>D-${days}일</strong> ${hours}시간 ${minutes}분 ${seconds}초 남았습니다.`;
+  }
+  setInterval(updateDday, 1000);
+  updateDday();
+
+  // 계좌번호 복사 기능
+  function copyText(text, btn) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = btn.textContent;
+      btn.textContent = '복사완료';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+
+  // 갤러리 라이트박스 팝업
   const galleryItems = document.querySelectorAll('.gallery-grid > div');
   let lightboxIndex = 0;
 
   function renderLightbox() {
-    const media = galleryItems[lightboxIndex].querySelector('img, svg');
-    document.getElementById('lightbox-content').innerHTML = media.outerHTML;
+    const img = galleryItems[lightboxIndex].querySelector('img');
+    document.getElementById('lightbox-content').innerHTML = `<img src="${img.src}" alt="">`;
   }
 
   function openLightbox(el) {
@@ -705,7 +715,6 @@
       document.getElementById('lightbox').classList.remove('open');
     }
   }
-
 </script>
 
 </body>
