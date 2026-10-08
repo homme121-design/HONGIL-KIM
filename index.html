@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- [수정필요] 웹페이지 타이틀 -->
     <title>김홍일❤️신선영, 결혼합니다.</title>
-    <!-- 👇 이 부분을 타이틀 아래에 추가해 주세요 👇 -->
+    <!-- 👇 Open Graph 메타 태그 -->
     <meta property="og:title" content="김홍일 ❤️ 신선영 결혼식에 초대합니다">
     <meta property="og:description" content="2026년 11월 21일 토요일 오후 3시 W웨딩 더펄웨딩홀">
     <meta property="og:image" content="main_photo.jpeg">
-    <!-- 👆 --------------------------------------- 👆 -->
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Gowun Batang & Pretendard -->
@@ -114,7 +113,7 @@
             <!-- ================= D-Day 카운트다운 영역 ================= -->
             <section class="bg-stone-100/70 py-10 px-6 text-center">
                 <!-- [수정필요] 상단 안내 문구 이름 변경 -->
-                <h3 class="serif-font text-base text-stone-800 mb-6">홍일이와 선영이의 결혼식까지</h3>
+                <h3 class="serif-font text-base text-stone-800 mb-6">김홍일이와 신선영이의 결혼식까지</h3>
                 <div id="countdown" class="grid grid-cols-4 gap-3 max-w-xs mx-auto">
                     <div class="bg-white p-3 rounded-2xl shadow-sm">
                         <span id="days" class="serif-font text-xl font-bold text-stone-800 block">00</span>
@@ -143,55 +142,55 @@
                     <h3 class="serif-font text-xl text-stone-800 font-semibold">우리의 아름다운 순간</h3>
                 </div>
                 
-                <!-- [수정필요] columns-2와 space-y-3을 사용하여 사진별 비율에 맞게 지그재그 배치됩니다. (클릭 시 팝업 실행 기능 적용) -->
+                <!-- [수정필요] columns-2와 space-y-3을 사용하여 사진별 비율에 맞게 지그재그 배치됩니다. (인덱스 순서대로 openLightbox 매개변수 지정) -->
                 <div class="columns-2 gap-3 space-y-3">
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_1.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(0)">
                         <img src="photo_1.jpeg" onerror="this.src='https://placehold.co/600x800/e5e0d8/78716c?text=Photo+1'" alt="웨딩사진 1" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_2.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(1)">
                         <img src="photo_2.jpeg" onerror="this.src='https://placehold.co/600x600/e5e0d8/78716c?text=Photo+2'" alt="웨딩사진 2" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_3.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(2)">
                         <img src="photo_3.jpeg" onerror="this.src='https://placehold.co/600x800/e5e0d8/78716c?text=Photo+3'" alt="웨딩사진 3" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_4.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(3)">
                         <img src="photo_4.jpeg" onerror="this.src='https://placehold.co/800x600/e5e0d8/78716c?text=Photo+4'" alt="웨딩사진 4" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_5.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(4)">
                         <img src="photo_5.jpeg" onerror="this.src='https://placehold.co/600x800/e5e0d8/78716c?text=Photo+5'" alt="웨딩사진 5" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_6.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(5)">
                         <img src="photo_6.jpeg" onerror="this.src='https://placehold.co/600x600/e5e0d8/78716c?text=Photo+6'" alt="웨딩사진 6" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_7.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(6)">
                         <img src="photo_7.jpeg" onerror="this.src='https://placehold.co/600x800/e5e0d8/78716c?text=Photo+7'" alt="웨딩사진 7" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_8.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(7)">
                         <img src="photo_8.jpeg" onerror="this.src='https://placehold.co/600x800/e5e0d8/78716c?text=Photo+8'" alt="웨딩사진 8" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_9.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(8)">
                         <img src="photo_9.jpeg" onerror="this.src='https://placehold.co/600x800/e5e0d8/78716c?text=Photo+9'" alt="웨딩사진 9" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_10.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(9)">
                         <img src="photo_10.jpeg" onerror="this.src='https://placehold.co/600x600/e5e0d8/78716c?text=Photo+10'" alt="웨딩사진 10" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_11.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(10)">
                         <img src="photo_11.jpeg" onerror="this.src='https://placehold.co/600x800/e5e0d8/78716c?text=Photo+11'" alt="웨딩사진 11" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_12.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(11)">
                         <img src="photo_12.jpeg" onerror="this.src='https://placehold.co/600x600/e5e0d8/78716c?text=Photo+12'" alt="웨딩사진 12" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_13.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(12)">
                         <img src="photo_13.jpeg" onerror="this.src='https://placehold.co/600x800/e5e0d8/78716c?text=Photo+13'" alt="웨딩사진 13" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_14.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(13)">
                         <img src="photo_14.jpeg" onerror="this.src='https://placehold.co/600x800/e5e0d8/78716c?text=Photo+14'" alt="웨딩사진 14" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_15.jpeg')">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(14)">
                         <img src="photo_15.jpeg" onerror="this.src='https://placehold.co/600x800/e5e0d8/78716c?text=Photo+15'" alt="웨딩사진 15" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox('photo_16.jpeg')">
-                        <img src="photo_16.jpeg" onerror="this.src='https://placehold.co/600x800/e5e0d8/78716c?text=Photo+1'" alt="웨딩사진 1" class="w-full object-cover hover:scale-105 transition duration-500">
+                    <div class="overflow-hidden rounded-2xl shadow-sm bg-stone-200 break-inside-avoid cursor-pointer" onclick="openLightbox(15)">
+                        <img src="photo_16.jpeg" onerror="this.src='https://placehold.co/600x800/e5e0d8/78716c?text=Photo+1'" alt="웨딩사진 16" class="w-full object-cover hover:scale-105 transition duration-500">
                     </div>
                 </div>
             </section>
@@ -336,14 +335,30 @@
             </div>
         </div>
 
-        <!-- ================= 이미지 확대 팝업(라이트박스) Modal ================= -->
-        <div id="lightbox-modal" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center p-4" onclick="closeLightbox()">
-            <div class="relative max-w-lg w-full flex items-center justify-center" onclick="event.stopPropagation()">
-                <!-- 닫기 버튼 -->
-                <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white text-xl font-bold px-3 py-1 hover:text-stone-300">&times;</button>
-                <!-- 확대된 이미지 -->
-                <img id="lightbox-img" src="" alt="확대 이미지" class="max-h-[85vh] max-w-full rounded-xl shadow-2xl object-contain">
+        <!-- ================= 이미지 확대 슬라이드 팝업(라이트박스) Modal ================= -->
+        <div id="lightbox-modal" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center" onclick="closeLightbox()">
+            
+            <!-- 상단 우측 닫기 버튼 & 현재 사진 번호 표시 -->
+            <div class="absolute top-5 right-5 text-white flex items-center gap-4 z-50" onclick="event.stopPropagation()">
+                <span id="lightbox-counter" class="text-xs tracking-widest text-stone-300">1 / 16</span>
+                <button onclick="closeLightbox()" class="text-white text-2xl font-bold px-3 py-1 hover:text-stone-300">&times;</button>
             </div>
+
+            <!-- 좌측 이전 버튼 -->
+            <button onclick="event.stopPropagation(); changeSlide(-1)" class="absolute left-3 md:left-8 text-white bg-black/40 hover:bg-black/70 w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold transition z-50">
+                &#10094;
+            </button>
+
+            <!-- 중앙 이미지 영역 (터치/클릭 버블링 방지) -->
+            <div class="relative max-w-lg w-full px-12 flex items-center justify-center" onclick="event.stopPropagation()">
+                <img id="lightbox-img" src="" alt="확대 이미지" class="max-h-[85vh] max-w-full rounded-xl shadow-2xl object-contain transition-all duration-300">
+            </div>
+
+            <!-- 우측 다음 버튼 -->
+            <button onclick="event.stopPropagation(); changeSlide(1)" class="absolute right-3 md:right-8 text-white bg-black/40 hover:bg-black/70 w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold transition z-50">
+                &#10095;
+            </button>
+
         </div>
 
     </div>
@@ -454,18 +469,79 @@
             modal.classList.remove('hidden');
         }
 
-        // ================= 갤러리 이미지 팝업(라이트박스) 제어 함수 =================
-        function openLightbox(imgSrc) {
-            const modal = document.getElementById('lightbox-modal');
-            const img = document.getElementById('lightbox-img');
-            img.src = imgSrc;
-            modal.classList.remove('hidden');
+        // ================= 갤러리 이미지 슬라이드(라이트박스) 제어 로직 =================
+        const galleryImages = [
+            'photo_1.jpeg', 'photo_2.jpeg', 'photo_3.jpeg', 'photo_4.jpeg',
+            'photo_5.jpeg', 'photo_6.jpeg', 'photo_7.jpeg', 'photo_8.jpeg',
+            'photo_9.jpeg', 'photo_10.jpeg', 'photo_11.jpeg', 'photo_12.jpeg',
+            'photo_13.jpeg', 'photo_14.jpeg', 'photo_15.jpeg', 'photo_16.jpeg'
+        ];
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightboxImage();
+            document.getElementById('lightbox-modal').classList.remove('hidden');
         }
 
         function closeLightbox() {
-            const modal = document.getElementById('lightbox-modal');
-            modal.classList.add('hidden');
+            document.getElementById('lightbox-modal').classList.add('hidden');
         }
+
+        function changeSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = galleryImages.length - 1; // 첫 번째에서 앞으로 가면 맨 끝으로
+            } else if (currentIndex >= galleryImages.length) {
+                currentIndex = 0; // 맨 끝에서 뒤로 가면 처음으로
+            }
+            updateLightboxImage();
+        }
+
+        function updateLightboxImage() {
+            const img = document.getElementById('lightbox-img');
+            const counter = document.getElementById('lightbox-counter');
+            const currentSrc = galleryImages[currentIndex];
+
+            img.src = currentSrc;
+            // 만약 실제 파일이 없어 플레이스홀더를 띄워야 할 경우 처리
+            img.onerror = function() {
+                this.src = `https://placehold.co/600x800/e5e0d8/78716c?text=Photo+${currentIndex + 1}`;
+            };
+            counter.innerText = `${currentIndex + 1} / ${galleryImages.length}`;
+        }
+
+        // 모바일 터치 스와이프(좌우 밀기) 및 키보드 조작 지원
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        const lightboxModal = document.getElementById('lightbox-modal');
+        lightboxModal.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, false);
+
+        lightboxModal.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, false);
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                changeSlide(1); // 왼쪽으로 밀면 다음 장
+            }
+            if (touchEndX > touchStartX + 50) {
+                changeSlide(-1); // 오른쪽으로 밀면 이전 장
+            }
+        }
+
+        // 키보드 방향키 좌우 조작
+        document.addEventListener('keydown', e => {
+            if (!lightboxModal.classList.contains('hidden')) {
+                if (e.key === 'ArrowLeft') changeSlide(-1);
+                if (e.key === 'ArrowRight') changeSlide(1);
+                if (e.key === 'Escape') closeLightbox();
+            }
+        });
 
         // Guestbook Local State
         let messages = [
